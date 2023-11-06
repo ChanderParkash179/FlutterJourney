@@ -18,7 +18,6 @@ class GradientContainer extends StatefulWidget {
 }
 
 class _GradientContainerState extends State<GradientContainer> {
-  var activeImg = 'assets/images/dice1.png';
   var p = 1;
 
   changeDice() {
@@ -47,7 +46,7 @@ class _GradientContainerState extends State<GradientContainer> {
               height: 20,
             ),
             Image.asset(
-              'assets/images/dice$p.png',
+              'assets/images/dice/dice$p.png',
               height: _height * .5,
               width: _width * .5,
             ),
