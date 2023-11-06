@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_journey/tasks/custom_text_widget_01.dart';
 
 const startAlignment = Alignment.topLeft;
 const endAlignment = Alignment.bottomRight;
@@ -11,6 +10,9 @@ class GradientContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var _width = MediaQuery.of(context).size.width;
+    var _height = MediaQuery.of(context).size.height;
+
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -19,8 +21,12 @@ class GradientContainer extends StatelessWidget {
           end: endAlignment,
         ),
       ),
-      child: const Center(
-        child: StyledText('Hello World!'),
+      child: Center(
+        child: Image.asset(
+          'assets/images/dice1.png',
+          height: _height * .5,
+          width: _width * .5,
+        ),
       ),
     );
   }
