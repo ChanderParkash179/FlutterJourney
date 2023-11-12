@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_journey/projects/quiz/questions.dart';
 import 'package:flutter_journey/projects/quiz/utils/answer_button.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class QuestionScreen extends StatefulWidget {
   const QuestionScreen({super.key});
@@ -32,11 +33,10 @@ class _QuestionScreenState extends State<QuestionScreen> {
           children: [
             Text(
               currentQuestion.text,
-              style: const TextStyle(
+              style: GoogleFonts.mcLaren(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
-                fontSize: 20,
-                fontFamily: 'Times New Roman',
+                fontSize: 18,
               ),
               textAlign: TextAlign.center,
             ),
