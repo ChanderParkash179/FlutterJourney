@@ -5,7 +5,7 @@ class QuizModel {
   final List<String> answers;
 
   // get shuffle list
-  List<String> getShuffleList() {
+  List<String> get shuffledList {
     final shuffleList = List.of(answers);
     shuffleList.shuffle();
     return shuffleList;
