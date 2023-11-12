@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 class AnswerButton extends StatelessWidget {
-  final String answer;
-  final double textSize;
-  final void Function() onTap;
+  final String? answer;
+  final double? textSize;
+  final void Function()? onTap;
 
-  const AnswerButton(this.answer, this.textSize, this.onTap, {super.key});
+  const AnswerButton({this.answer, this.textSize, this.onTap, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class AnswerButton extends StatelessWidget {
         ),
       ),
       child: Text(
-        answer,
+        answer!,
         style: const TextStyle(
           color: Colors.white,
           fontWeight: FontWeight.bold,

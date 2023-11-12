@@ -38,7 +38,7 @@ const questions = [
     ],
   ),
   QuizModel(
-    '10. Which command is used to run tests in a Flutter project?',
+    'Which command is used to run tests in a Flutter project?',
     [
       'flutter test',
       'run test',
