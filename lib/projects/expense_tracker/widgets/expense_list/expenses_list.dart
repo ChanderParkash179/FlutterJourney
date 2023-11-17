@@ -4,14 +4,23 @@ import 'package:flutter_journey/projects/expense_tracker/widgets/expense_list/ex
 
 class ExpensesList extends StatelessWidget {
   final List<Expense> expenses;
-  const ExpensesList({super.key, required this.expenses});
+  final void Function(Expense) onRemoveExpense;
+
+  const ExpensesList(
+      {super.key, required this.expenses, required this.onRemoveExpense});
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: expenses.length,
-      itemBuilder: (context, index) => ExpenseItem(
-        expenses[index],
+      itemBuilder: (context, index) => Dismissible(
+        key: ValueKey(expenses[index]),
+        onDismissed: (direction) {
+          onRemoveExpense(expenses[index]);
+        },
+        child: ExpenseItem(
+          expenses[index],
+        ),
       ),
     );
   }
