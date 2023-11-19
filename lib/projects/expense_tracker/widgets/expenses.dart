@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_journey/projects/expense_tracker/widgets/chart/chart.dart';
 import 'package:flutter_journey/projects/expense_tracker/widgets/expense_list/expenses_list.dart';
 import 'package:flutter_journey/projects/expense_tracker/model/expense.dart';
 import 'package:flutter_journey/projects/expense_tracker/widgets/new_expense.dart';
-import 'package:flutter_journey/tasks/custom_text_widget_01.dart';
 
 class Expenses extends StatefulWidget {
   const Expenses({super.key});
@@ -53,6 +53,7 @@ class _ExpensesState extends State<Expenses> {
       _registeredExpenses.remove(expense);
     });
 
+    ScaffoldMessenger.of(context).clearSnackBars();
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         duration: const Duration(seconds: 3),
@@ -90,13 +91,18 @@ class _ExpensesState extends State<Expenses> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: const StyledText('Flutter Expense Tracker', 16),
-          backgroundColor: Colors.purple.shade900,
+          title: const Text(
+            'Flutter Expense Tracker',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+              fontFamily: 'Times New Roman',
+            ),
+          ),
           actions: [
             IconButton(
               icon: const Icon(
                 CupertinoIcons.add,
-                color: Colors.white,
               ),
               onPressed: () {
                 _openAddExpenseOverlay();
@@ -106,6 +112,7 @@ class _ExpensesState extends State<Expenses> {
         ),
         body: Column(
           children: [
+            Chart(expenses: _registeredExpenses),
             Expanded(
               child: mainContent,
             ),
