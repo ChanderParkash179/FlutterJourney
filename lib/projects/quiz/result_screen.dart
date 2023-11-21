@@ -42,8 +42,10 @@ class ResultScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             StyledText(
-                'You answered $noOfCorrectQuestion out of $noOfTotalQuestion questions correctly',
-                14),
+              'You answered $noOfCorrectQuestion out of $noOfTotalQuestion questions correctly',
+              14,
+              Colors.white,
+            ),
             const SizedBox(
               height: 30,
             ),
@@ -57,7 +59,11 @@ class ResultScreen extends StatelessWidget {
                 CupertinoIcons.refresh_thick,
                 color: Colors.white,
               ),
-              label: const StyledText('Restart Quiz', 14),
+              label: const StyledText(
+                'Restart Quiz',
+                14,
+                Colors.white,
+              ),
             )
           ],
         ),

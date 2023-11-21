@@ -28,7 +28,7 @@ class _DiceGameState extends State<DiceGame> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          StyledText('You got $p points', 28),
+          StyledText('You got $p points', 28, Colors.white),
           const SizedBox(
             height: 20,
           ),
@@ -52,6 +52,7 @@ class _DiceGameState extends State<DiceGame> {
             child: const StyledText(
               'Dice Roll',
               28,
+              Colors.white,
             ),
           ),
         ],
