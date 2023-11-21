@@ -30,6 +30,7 @@ class _ExpensesState extends State<Expenses> {
 
   void _openAddExpenseOverlay() {
     showModalBottomSheet(
+      useSafeArea: true,
       isScrollControlled: true,
       context: context,
       builder: (ctx) => NewExpense(
@@ -88,9 +89,12 @@ class _ExpensesState extends State<Expenses> {
       );
     }
 
+    final width = MediaQuery.of(context).size.width;
+
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: const Text(
             'Flutter Expense Tracker',
             style: TextStyle(
@@ -110,14 +114,29 @@ class _ExpensesState extends State<Expenses> {
             ),
           ],
         ),
-        body: Column(
-          children: [
-            Chart(expenses: _registeredExpenses),
-            Expanded(
-              child: mainContent,
-            ),
-          ],
-        ),
+        body: width < 600
+            ? Column(
+                children: [
+                  Chart(
+                    expenses: _registeredExpenses,
+                  ),
+                  Expanded(
+                    child: mainContent,
+                  ),
+                ],
+              )
+            : Row(
+                children: [
+                  Expanded(
+                    child: Chart(
+                      expenses: _registeredExpenses,
+                    ),
+                  ),
+                  Expanded(
+                    child: mainContent,
+                  ),
+                ],
+              ),
       ),
     );
   }
