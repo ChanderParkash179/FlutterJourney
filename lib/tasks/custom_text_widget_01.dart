@@ -12,7 +12,7 @@ class StyledText extends StatelessWidget {
     return Text(
       text,
       style: TextStyle(
-        color: Colors.white,
+        color: color,
         fontWeight: FontWeight.bold,
         fontSize: textSize,
         fontFamily: 'Times New Roman',
