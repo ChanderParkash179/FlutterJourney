@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_journey/projects/todo/flutter_internals/ui_updates.dart';
+import 'package:flutter_journey/projects/todo/todo_app/widget/keys.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3: true),
-      home: const UIUpdates(),
+      home: const Keys(),
     );
   }
 }
