@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_journey/projects/flutter_internals/widgets/change_value_btns.dart';
+import 'package:flutter_journey/projects/todo/flutter_internals/widgets/change_value_btns.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class UIUpdates extends StatelessWidget {

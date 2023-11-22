@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_journey/projects/dice_game.dart';
+import 'package:flutter_journey/projects/dice/dice_game.dart';
 
 const startAlignment = Alignment.topLeft;
 const endAlignment = Alignment.bottomRight;

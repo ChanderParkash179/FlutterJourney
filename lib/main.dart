@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_journey/projects/flutter_internals/ui_updates.dart';
+import 'package:flutter_journey/projects/todo/flutter_internals/ui_updates.dart';
 
 void main() {
   runApp(const MyApp());
