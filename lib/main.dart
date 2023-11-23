@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_journey/projects/todo/todo_app/widget/keys.dart';
+import 'package:flutter_journey/projects/meal_app/widgets/categories.dart';
+import 'package:flutter_journey/theme/app_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(useMaterial3: true),
-      home: const Keys(),
+      theme: AppThemes.currentTheme(),
+      home: const CategoriesScreen(),
     );
   }
 }
