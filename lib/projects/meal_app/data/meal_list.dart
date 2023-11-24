@@ -1,11 +1,12 @@
 import 'package:flutter_journey/projects/meal_app/model/meal.dart';
 
-const dummyMeals = [
+const availableMeals = [
   Meal(
     id: 'm1',
     categories: ['c1', 'c2', 'c3'],
     title: 'Spaghetti with Tomato Sauce',
-    imageUrl: 'https://example.com/spaghetti.jpg',
+    imageUrl:
+        'https://cdn.pixabay.com/photo/2016/05/14/18/23/spaghetti-1392272_640.jpg',
     ingredients: ['Spaghetti', 'Tomato Sauce', 'Garlic', 'Onions', 'Olive Oil'],
     steps: [
       'Boil spaghetti',
@@ -25,7 +26,7 @@ const dummyMeals = [
     id: 'm2',
     categories: ['c4', 'c5', 'c6'],
     title: 'Chicken Alfredo Pasta',
-    imageUrl: 'https://example.com/chicken_alfredo.jpg',
+    imageUrl: 'https://shorturl.at/hsxDM',
     ingredients: [
       'Chicken',
       'Fettuccine Pasta',
@@ -51,7 +52,8 @@ const dummyMeals = [
     id: 'm3',
     categories: ['c7', 'c8', 'c9'],
     title: 'Vegetarian Stir-Fry',
-    imageUrl: 'https://example.com/vegetarian_stir_fry.jpg',
+    imageUrl:
+        'https://cdn.pixabay.com/photo/2017/06/21/22/44/paella-2428945_640.jpg',
     ingredients: ['Tofu', 'Broccoli', 'Bell Peppers', 'Soy Sauce', 'Ginger'],
     steps: [
       'Sauté tofu in a pan',
@@ -71,7 +73,8 @@ const dummyMeals = [
     id: 'm4',
     categories: ['c2', 'c5', 'c8'],
     title: 'Margherita Pizza',
-    imageUrl: 'https://example.com/margherita_pizza.jpg',
+    imageUrl:
+        'https://cdn.pixabay.com/photo/2021/04/23/07/43/pizza-6200962_640.jpg',
     ingredients: [
       'Pizza Dough',
       'Tomato Sauce',
@@ -97,7 +100,7 @@ const dummyMeals = [
     id: 'm5',
     categories: ['c3', 'c6', 'c9'],
     title: 'Salmon with Lemon Dill Sauce',
-    imageUrl: 'https://example.com/salmon_lemon_dill.jpg',
+    imageUrl: 'https://shorturl.at/lzR35',
     ingredients: [
       'Salmon fillets',
       'Lemon',
@@ -124,7 +127,7 @@ const dummyMeals = [
     id: 'm6',
     categories: ['c1', 'c4', 'c7'],
     title: 'Pesto Pasta with Cherry Tomatoes',
-    imageUrl: 'https://example.com/pesto_pasta.jpg',
+    imageUrl: 'https://shorturl.at/aCUW9',
     ingredients: [
       'Pasta',
       'Pesto Sauce',
@@ -150,7 +153,8 @@ const dummyMeals = [
     id: 'm7',
     categories: ['c2', 'c5', 'c8'],
     title: 'Beef Tacos',
-    imageUrl: 'https://example.com/beef_tacos.jpg',
+    imageUrl:
+        'https://cdn.pixabay.com/photo/2021/02/02/21/22/food-5975493_640.jpg',
     ingredients: [
       'Ground Beef',
       'Taco Shells',
@@ -176,7 +180,8 @@ const dummyMeals = [
     id: 'm8',
     categories: ['c3', 'c6', 'c9'],
     title: 'Caprese Salad',
-    imageUrl: 'https://example.com/caprese_salad.jpg',
+    imageUrl:
+        'https://cdn.pixabay.com/photo/2018/04/21/03/47/food-3337621_640.jpg',
     ingredients: [
       'Tomatoes',
       'Fresh Mozzarella',
@@ -203,7 +208,8 @@ const dummyMeals = [
     id: 'm9',
     categories: ['c1', 'c4', 'c7'],
     title: 'Chicken Caesar Salad',
-    imageUrl: 'https://example.com/chicken_caesar_salad.jpg',
+    imageUrl:
+        'https://cdn.pixabay.com/photo/2017/03/19/14/59/italian-salad-2156719_640.jpg',
     ingredients: [
       'Chicken Breast',
       'Romaine Lettuce',
@@ -228,7 +234,8 @@ const dummyMeals = [
     id: 'm10',
     categories: ['c2', 'c5', 'c8'],
     title: 'Shrimp Scampi',
-    imageUrl: 'https://example.com/shrimp_scampi.jpg',
+    imageUrl:
+        'https://cdn.pixabay.com/photo/2021/06/21/15/03/salmon-6353898_640.jpg',
     ingredients: [
       'Shrimp',
       'Linguine Pasta',
@@ -250,209 +257,5 @@ const dummyMeals = [
     isLactoseFree: false,
     isVegan: false,
     isVegetarian: false,
-  ),
-  Meal(
-    id: 'm11',
-    categories: ['c3', 'c6', 'c9'],
-    title: 'Vegetable Curry',
-    imageUrl: 'https://example.com/vegetable_curry.jpg',
-    ingredients: ['Mixed Vegetables', 'Curry Sauce', 'Coconut Milk', 'Rice'],
-    steps: [
-      'Cook mixed vegetables in curry sauce',
-      'Simmer with coconut milk',
-      'Serve over rice'
-    ],
-    duration: 40,
-    complexity: Complexity.challenging,
-    affordability: Affordability.affordable,
-    isGlutenFree: true,
-    isLactoseFree: true,
-    isVegan: true,
-    isVegetarian: true,
-  ),
-  Meal(
-    id: 'm12',
-    categories: ['c1', 'c4', 'c7'],
-    title: 'Mushroom Risotto',
-    imageUrl: 'https://example.com/mushroom_risotto.jpg',
-    ingredients: [
-      'Arborio Rice',
-      'Mushrooms',
-      'Vegetable Broth',
-      'Parmesan Cheese',
-      'Onions'
-    ],
-    steps: [
-      'Sauté onions and mushrooms',
-      'Cook Arborio rice in vegetable broth',
-      'Stir in Parmesan cheese',
-      'Serve hot'
-    ],
-    duration: 40,
-    complexity: Complexity.challenging,
-    affordability: Affordability.pricey,
-    isGlutenFree: true,
-    isLactoseFree: false,
-    isVegan: false,
-    isVegetarian: true,
-  ),
-  Meal(
-    id: 'm13',
-    categories: ['c2', 'c5', 'c8'],
-    title: 'BBQ Chicken Sandwich',
-    imageUrl: 'https://example.com/bbq_chicken_sandwich.jpg',
-    ingredients: [
-      'Grilled Chicken Breast',
-      'BBQ Sauce',
-      'Bacon',
-      'Lettuce',
-      'Tomato',
-      'Mayonnaise'
-    ],
-    steps: [
-      'Grill chicken and bacon',
-      'Assemble sandwich with BBQ sauce, lettuce, tomato, and mayonnaise',
-      'Serve hot'
-    ],
-    duration: 25,
-    complexity: Complexity.simple,
-    affordability: Affordability.affordable,
-    isGlutenFree: false,
-    isLactoseFree: false,
-    isVegan: false,
-    isVegetarian: false,
-  ),
-  Meal(
-    id: 'm14',
-    categories: ['c3', 'c6', 'c9'],
-    title: 'Quinoa Salad with Chickpeas',
-    imageUrl: 'https://example.com/quinoa_chickpea_salad.jpg',
-    ingredients: [
-      'Quinoa',
-      'Chickpeas',
-      'Cucumber',
-      'Cherry Tomatoes',
-      'Feta Cheese',
-      'Olive Oil'
-    ],
-    steps: [
-      'Cook quinoa',
-      'Combine with chickpeas, cucumber, tomatoes, and feta',
-      'Drizzle with olive oil',
-      'Serve cold'
-    ],
-    duration: 30,
-    complexity: Complexity.simple,
-    affordability: Affordability.affordable,
-    isGlutenFree: true,
-    isLactoseFree: true,
-    isVegan: false,
-    isVegetarian: true,
-  ),
-  Meal(
-    id: 'm15',
-    categories: ['c1', 'c4', 'c7'],
-    title: 'Beef and Broccoli Stir-Fry',
-    imageUrl: 'https://example.com/beef_broccoli_stir_fry.jpg',
-    ingredients: [
-      'Beef Strips',
-      'Broccoli',
-      'Soy Sauce',
-      'Garlic',
-      'Ginger',
-      'Rice'
-    ],
-    steps: [
-      'Sauté beef strips with garlic and ginger',
-      'Stir-fry broccoli',
-      'Add soy sauce',
-      'Serve over rice'
-    ],
-    duration: 30,
-    complexity: Complexity.challenging,
-    affordability: Affordability.pricey,
-    isGlutenFree: false,
-    isLactoseFree: true,
-    isVegan: false,
-    isVegetarian: false,
-  ),
-  Meal(
-    id: 'm16',
-    categories: ['c2', 'c5', 'c8'],
-    title: 'Margherita Pizza',
-    imageUrl: 'https://example.com/margherita_pizza.jpg',
-    ingredients: [
-      'Pizza Dough',
-      'Tomato Sauce',
-      'Fresh Mozzarella',
-      'Basil',
-      'Olive Oil'
-    ],
-    steps: [
-      'Roll out pizza dough',
-      'Spread tomato sauce',
-      'Add mozzarella and basil',
-      'Bake until crust is golden'
-    ],
-    duration: 20,
-    complexity: Complexity.simple,
-    affordability: Affordability.affordable,
-    isGlutenFree: false,
-    isLactoseFree: false,
-    isVegan: false,
-    isVegetarian: true,
-  ),
-  Meal(
-    id: 'm17',
-    categories: ['c3', 'c6', 'c9'],
-    title: 'Salmon with Lemon Dill Sauce',
-    imageUrl: 'https://example.com/salmon_lemon_dill.jpg',
-    ingredients: [
-      'Salmon fillets',
-      'Lemon',
-      'Dill',
-      'Olive Oil',
-      'Salt',
-      'Pepper'
-    ],
-    steps: [
-      'Season salmon with salt and pepper',
-      'Pan-sear salmon in olive oil',
-      'Prepare lemon dill sauce',
-      'Serve hot'
-    ],
-    duration: 35,
-    complexity: Complexity.challenging,
-    affordability: Affordability.pricey,
-    isGlutenFree: true,
-    isLactoseFree: true,
-    isVegan: false,
-    isVegetarian: false,
-  ),
-  Meal(
-    id: 'm18',
-    categories: ['c1', 'c4', 'c7'],
-    title: 'Pesto Pasta with Cherry Tomatoes',
-    imageUrl: 'https://example.com/pesto_pasta.jpg',
-    ingredients: [
-      'Pasta',
-      'Pesto Sauce',
-      'Cherry Tomatoes',
-      'Parmesan Cheese',
-      'Garlic'
-    ],
-    steps: [
-      'Boil pasta',
-      'Toss with pesto sauce',
-      'Add halved cherry tomatoes',
-      'Top with Parmesan and garlic'
-    ],
-    duration: 25,
-    complexity: Complexity.simple,
-    affordability: Affordability.affordable,
-    isGlutenFree: false,
-    isLactoseFree: true,
-    isVegan: false,
-    isVegetarian: true,
   ),
 ];
