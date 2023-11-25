@@ -26,7 +26,8 @@ const availableMeals = [
     id: 'm2',
     categories: ['c4', 'c5', 'c6'],
     title: 'Chicken Alfredo Pasta',
-    imageUrl: 'https://shorturl.at/hsxDM',
+    imageUrl:
+        'https://simply-delicious-food.com/wp-content/uploads/2021/09/Chicken-alfredo-1.jpg',
     ingredients: [
       'Chicken',
       'Fettuccine Pasta',
@@ -100,7 +101,8 @@ const availableMeals = [
     id: 'm5',
     categories: ['c3', 'c6', 'c9'],
     title: 'Salmon with Lemon Dill Sauce',
-    imageUrl: 'https://shorturl.at/lzR35',
+    imageUrl:
+        'https://mojo.generalmills.com/api/public/content/RmuF17SxZkOthUO6U1X5bQ_gmi_hi_res_jpeg.jpeg',
     ingredients: [
       'Salmon fillets',
       'Lemon',
@@ -127,7 +129,8 @@ const availableMeals = [
     id: 'm6',
     categories: ['c1', 'c4', 'c7'],
     title: 'Pesto Pasta with Cherry Tomatoes',
-    imageUrl: 'https://shorturl.at/aCUW9',
+    imageUrl:
+        'https://loveandgoodstuff.com/wp-content/uploads/2021/09/cherry-tomato-pesto-pasta-5.jpg',
     ingredients: [
       'Pasta',
       'Pesto Sauce',
