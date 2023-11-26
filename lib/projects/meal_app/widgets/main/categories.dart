@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_journey/projects/meal_app/data/category_list.dart';
 import 'package:flutter_journey/projects/meal_app/data/meal_list.dart';
 import 'package:flutter_journey/projects/meal_app/model/category.dart';
-import 'package:flutter_journey/projects/meal_app/widgets/category_grid_item.dart';
-import 'package:flutter_journey/projects/meal_app/widgets/meals.dart';
+import 'package:flutter_journey/projects/meal_app/widgets/common/category_grid_item.dart';
+import 'package:flutter_journey/projects/meal_app/widgets/main/meals.dart';
 
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({super.key});

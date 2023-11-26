@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_journey/projects/meal_app/widgets/categories.dart';
+import 'package:flutter_journey/projects/meal_app/widgets/main/categories.dart';
 import 'package:flutter_journey/theme/app_theme.dart';
 
 void main() {
