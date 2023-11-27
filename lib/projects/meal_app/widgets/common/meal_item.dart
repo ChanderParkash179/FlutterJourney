@@ -5,8 +5,9 @@ import 'package:transparent_image/transparent_image.dart';
 
 class MealItem extends StatelessWidget {
   final Meal meal;
+  final void Function(Meal meal) onSelectionMeal;
 
-  const MealItem(this.meal, {super.key});
+  const MealItem(this.meal, this.onSelectionMeal, {super.key});
 
   String get complexityText {
     return meal.complexity.name[0].toUpperCase() +
@@ -28,7 +29,9 @@ class MealItem extends StatelessWidget {
       clipBehavior: Clip.hardEdge,
       elevation: 2,
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          onSelectionMeal(meal);
+        },
         child: Stack(
           children: [
             FadeInImage(

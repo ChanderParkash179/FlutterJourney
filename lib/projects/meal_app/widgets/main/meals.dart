@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_journey/projects/meal_app/model/meal.dart';
+import 'package:flutter_journey/projects/meal_app/widgets/common/meal_details.dart';
 import 'package:flutter_journey/projects/meal_app/widgets/common/meal_item.dart';
 
 class Meals extends StatelessWidget {
@@ -13,6 +14,15 @@ class Meals extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
+    void onSelectMeal(Meal meal) {
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (ctx) => MealDetailsScreen(meal),
+        ),
+      );
+    }
+
     Widget content = Center(
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -37,9 +47,7 @@ class Meals extends StatelessWidget {
     if (meals.isNotEmpty) {
       content = ListView.builder(
         itemCount: meals.length,
-        itemBuilder: (ctx, index) => MealItem(
-          meals[index],
-        ),
+        itemBuilder: (ctx, index) => MealItem(meals[index], onSelectMeal),
       );
     }
 
