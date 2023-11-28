@@ -5,9 +5,13 @@ import 'package:transparent_image/transparent_image.dart';
 
 class MealItem extends StatelessWidget {
   final Meal meal;
-  final void Function(Meal meal) onSelectionMeal;
+  final void Function(BuildContext context, Meal meal) onSelectMeal;
 
-  const MealItem(this.meal, this.onSelectionMeal, {super.key});
+  const MealItem({
+    super.key,
+    required this.meal,
+    required this.onSelectMeal,
+  });
 
   String get complexityText {
     return meal.complexity.name[0].toUpperCase() +
@@ -30,7 +34,7 @@ class MealItem extends StatelessWidget {
       elevation: 2,
       child: InkWell(
         onTap: () {
-          onSelectionMeal(meal);
+          onSelectMeal(context, meal);
         },
         child: Stack(
           children: [
