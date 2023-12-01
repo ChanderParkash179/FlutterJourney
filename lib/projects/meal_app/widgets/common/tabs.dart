@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_journey/projects/meal_app/model/meal.dart';
+import 'package:flutter_journey/projects/meal_app/widgets/common/filters.dart';
+import 'package:flutter_journey/projects/meal_app/widgets/common/main_drawer.dart';
 import 'package:flutter_journey/projects/meal_app/widgets/main/categories.dart';
 import 'package:flutter_journey/projects/meal_app/widgets/main/meals.dart';
 
@@ -39,6 +41,17 @@ class _TabsScreenState extends State<TabsScreen> {
     }
   }
 
+  void _setScreen(String identifier) {
+    Navigator.of(context).pop();
+    if (identifier == 'filters') {
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (ctx) => const FilterScreen(),
+        ),
+      );
+    }
+  }
+
   void _selectPage(int index) {
     setState(() {
       _selectedPageIndex = index;
@@ -61,6 +74,7 @@ class _TabsScreenState extends State<TabsScreen> {
 
     return Scaffold(
       appBar: AppBar(title: Text(activePageTitle)),
+      drawer: MainDrawer(onSelectScreen: _setScreen),
       body: activePage,
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedPageIndex,
